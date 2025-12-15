@@ -8,7 +8,7 @@ This app doesn’t tell you where to go — it helps you understand what’s hap
 
 ---
 
-## 🧠 Why This App Exists
+##  Why This App?
 
 Products don’t have to beat giants. They just need to solve a different problem.
 
@@ -19,7 +19,7 @@ This app intentionally focuses on a different challenge:
 
 ---
 
-## 🔍 What This App Does
+## What This App Does?
 
 Instead of navigation, the app provides:
 
@@ -32,7 +32,7 @@ This makes traffic **measurable, comparable, and observable over time**, which n
 
 ---
 
-## 📈 When This App Is Useful
+## When This App Is Useful?
 
 Use this app **before** opening a navigation tool — not during navigation.
 
@@ -44,16 +44,7 @@ Typical use cases:
 - Supporting mobility, operations, or planning discussions  
 - Demonstrating how live data can be turned into actionable insights
 
----
 
-## 💡 Why This Positioning Matters
-
-By not competing with Google Maps, the app:
-
-- Solves a clearly defined, complementary problem  
-- Avoids feature bloat and false expectations  
-- Remains explainable and data-driven  
-- Demonstrates strong product thinking
 
 This is an **insight tool**, not a consumer navigation product.
 
