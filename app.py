@@ -98,31 +98,39 @@ if st.button("Check Traffic"):
             ((free_flow_speed - current_speed) / free_flow_speed) * 100, 1
         )
 
+        estimated_delay = round((slowdown_percentage / 100) * 30)
 
         # 6️⃣ Determine traffic condition
         if slowdown_percentage < 10:
             condition = "🟢 Light traffic"
-            st.success(f"Smooth driving expected near {city}. Enjoy your ride!")
+            st.success(
+                f"Traffic is {slowdown_percentage}% slower than normal "
+                f"(≈ {estimated_delay} min delay)"
+            )
         elif slowdown_percentage < 25:
             condition = "🟡 Moderate congestion"
-            st.warning(f"Moderate congestion detected near {city}. Drive carefully.")
+            st.warning(
+                f"Traffic is {slowdown_percentage}% slower than normal "
+                f"(≈ {estimated_delay} min delay)"
+            )
         else:
             condition = "🔴 Heavy congestion"
+            st.error(
+            f"Traffic is {slowdown_percentage}% slower than normal "
+            f"(≈ {estimated_delay} min delay). Consider alternate routes."
+        )
 
-        # 🚨 Show warning if congestion is high
-        if slowdown_percentage >= 25:
-            st.error(f"Heavy congestion detected near {city}. Consider alternate routes.")
+
 
         # 7️⃣ Display results
         st.metric("Current Speed (km/h)", current_speed)
         st.metric("Free Flow Speed (km/h)", free_flow_speed)
-        st.success(f"Traffic is {slowdown_percentage}% slower than normal")
         st.write(f"**Condition:** {condition}")
+
         # Congestion bar
         st.progress(min(int(slowdown_percentage), 100))
 
         # Map
-        #st.set_page_config(layout="wide")
         st.map([{"lat": lat, "lon": lon}])
 
 
